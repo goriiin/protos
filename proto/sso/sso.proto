@@ -15,18 +15,22 @@ service Auth {
 
 
 message RegisterRequest {
-  string email = 1; // Email of the user to register.
-  string password = 2; // Password of the user to register.
+  string nick = 1; // Nickname of the user to register.
+  string email = 2; // Email of the user to register.
+  string password = 3; // Password of the user to register.
 }
 
 message RegisterResponse {
   int64 user_id = 1; // User ID of the registered user.
+  string nick = 2; // Nickname of the user to register.
+  string email = 3; // Email of the user to register.
 }
 
 message LoginRequest {
-  string email = 1; // Email of the user to login.
-  string password = 2; // Password of the user to login.
-  int32 app_id = 3; // ID of the app to login to.
+  string nick = 1; // Nickname of the user to register.
+  string email = 2; // Email of the user to register.
+  string password = 3; // Password of the user to register.
+  int32 app_id = 4; // ID of the app to login to.
 }
 
 message LoginResponse {
